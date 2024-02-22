@@ -25,27 +25,31 @@ function WorkCard(props: WorkCardProps) {
           className="flex lg:gap-4 gap-2 flex-col md:flex-row items-start relative group/link"
           href={props.insLink}
         >
-          <div className="lg:sticky lg:top-14 md:py-2.5 flex-shrink-0 top-0">
+          <div className=" lg:top-14 md:py-2.5 flex-shrink-0 top-0">
+            {" "}
+            {/* lg:sticky */}
             <Image
               alt={props.alt}
-              className="w-7 h-7 outline-1 -outline-offset-1 outline outline-transparent rounded-lg dark:outline-zinc-900"
+              className="w-7 h-7 rounded-lg"
               src={props.src}
               width={28}
               height={28}
             />
           </div>
           <div className="w-full">
-            <div className="flex gap-4 md:gap-8 justify-between items-center sticky top-0 lg:top-14 z-40 py-2">
-              <div className="w-full h-full absolute left-1/2 -translate-x-1/2 bg-light-zinc/95 backdrop-blur-xl dark:bg-black/90" />
+            <div className="flex gap-4 md:gap-8 justify-between items-center  z-40 py-2">
+              <div className="w-full absolute left-1/2 -translate-x-1/2 bg-light-zinc/95 backdrop-blur-xl dark:bg-black/90" />
               <div className="flex md:gap-3 gap-2 items-center relative">
                 <h3
                   className={cn(
                     "text-2xl font-semibold",
                     props.title === "Magnet"
                       ? "font-lufgaBold"
-                      : props.title === "SabiaMente"
+                      : props.title === "Nous"
                       ? "font-recoletaAltBold"
-                      : ""
+                      : props.title === "Fitter"
+                      ? "font-lufgaBold"
+                      : "font"
                   )}
                 >
                   {props.title}
@@ -88,13 +92,13 @@ function WorkCard(props: WorkCardProps) {
             <p className="mb-6 text-zinc-500 dark:text-zinc-400">
               {props.description}
             </p>
-            <div className="bg-zinc-100 dark:bg-zinc-900/70 overflow-hidden lg:h-[512px] flex items-center justify-center">
+            <div className="bg-muted dark:bg-zinc-900/70 overflow-hidden lg:h-[512px] flex flex-row items-center justify-center rounded-md">
               <Image
-                className="relative lg:top-8 md:left-0 md:h-auto h-96 md:object-scale-down md:object-center object-cover object-left md:px-12 pl-4"
+                className="rounded-sm"
                 src={props.bigImage}
                 alt={props.bigImageAlt}
-                width={512}
-                height={384}
+                width={700}
+                height={525}
               />
             </div>
           </div>

@@ -15,12 +15,11 @@ function Navbar() {
 
   return (
     <motion.nav
-      className="flex items-center justify-center py-4 selection:bg-green-200"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.4 }}
+      className="flex items-center justify-center py-4 selection:bg-green-200 dark:selection:bg-purple-300"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
     >
-      <div className="bg-zinc-100/90 shadow-md rounded-3xl px-8 py-2 flex flex-row space-x-6">
+      <div className="bg-zinc-100/90 shadow-md dark:shadow-slate-300 dark:shadow-sm rounded-3xl px-8 py-2 flex flex-row space-x-6">
         {paths.map((path) => {
           return (
             <Link

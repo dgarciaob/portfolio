@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
+import ThemeSwitch from "@/components/theme-switch";
+import { Providers } from "@/context/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,14 +19,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={cn("relative antialiased bg-[#F6F5FF]", inter.className)}
+        className={cn(
+          "relative antialiased bg-[#F6F5FF] dark:bg-[#1f1f1f]",
+          inter.className
+        )}
       >
-        <main className="relative flex flex-col w-full min-h-screen">
-          <Navbar />
-          <div className="flex-1">{children}</div>
-        </main>
+        <Providers>
+          <main className="relative flex flex-col w-full min-h-screen">
+            <Navbar />
+            <div className="flex-1">{children}</div>
+          </main>
+          <ThemeSwitch />
+        </Providers>
       </body>
     </html>
   );

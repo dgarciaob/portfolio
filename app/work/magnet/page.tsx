@@ -1,7 +1,7 @@
 import React from "react";
 
 function Magnet() {
-  return <div>Magnet</div>;
+  return <main>Magnet</main>;
 }
 
 export default Magnet;
