@@ -110,7 +110,7 @@ function AboutPage() {
           </div>
         </section>{" "}
         <section className="mx-40 flex flex-col items-start mt-20">
-          <h2 className="text-xl font-bold">Apps</h2>
+          <h2 className="text-xl font-bold">Favorite Apps</h2>
           <AppScroll />
         </section>
         <section className="mx-40 flex flex-col items-start mt-20 mb-20">

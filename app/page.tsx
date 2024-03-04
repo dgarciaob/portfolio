@@ -2,6 +2,7 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import WorkCard from "@/components/WorkCard";
 import Contact from "@/components/Contact";
 import FechaCompleta from "@/components/FechaCompleta";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { AnimatedTooltipPreview } from "@/components/AnimatedTooltip";
 import "@/components/css/Navbar.css";
 
@@ -101,3 +102,12 @@ export default function Home() {
     </MaxWidthWrapper>
   );
 }
+
+const people = [
+  {
+    id: 1,
+    name: "Diego García",
+    designation: "Designer & Developer",
+    image: "/images/profilePicDiego.png",
+  },
+];

@@ -1,7 +1,7 @@
 import React from "react";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
-function FeedPage() {
+function ContactPage() {
   return (
     <MaxWidthWrapper>
       <main>hola</main>
@@ -9,4 +9,4 @@ function FeedPage() {
   );
 }
 
-export default FeedPage;
+export default ContactPage;
