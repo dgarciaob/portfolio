@@ -79,7 +79,7 @@ function Swiftr() {
         </p>
         <p className="max-w-xl mt-4 font-medium">
           The website was built with Next.js, TailwindCSS, Framer Motion and
-          deployed on Vercel. Special mention to{" "}
+          deployed on Vercel. Shout out to{" "}
           <Link
             href="https://ui.aceternity.com/"
             target="_blank"
