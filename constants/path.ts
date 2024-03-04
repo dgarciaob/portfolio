@@ -8,7 +8,7 @@ export const paths = [
     path: "/about",
   },
   {
-    name: "Feed",
-    path: "/feed",
+    name: "Contact",
+    path: "/contact",
   },
 ];

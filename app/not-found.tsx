@@ -33,13 +33,13 @@ function NotFound() {
           4
         </motion.div>
       </section>
-      <h1 className="text-5xl font-medium max-w-3xl">
-        Ups! No encontramos lo que estás buscando
+      <h1 className="text-5xl font-bold text-pretty max-w-3xl">
+        Oops! Could not find what you were looking for.
       </h1>
 
       <Link href="/" className="mt-10">
-        <button className="text-lg font-medium text-white dark:text-black hover:cursor-pointer bg-[#1f1f1f] dark:bg-white px-8 py-2 rounded-md hover:opacity-80 transition-all duration-200">
-          Volver al inicio
+        <button className="text-lg font-semibold text-white dark:text-black hover:cursor-pointer bg-[#1f1f1f] dark:bg-white px-8 py-2 rounded-lg hover:opacity-80 transition-all duration-200">
+          Back to Home
         </button>
       </Link>
     </main>
