@@ -9,8 +9,8 @@ import { Providers } from "@/context/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Diego García Obando - Dev",
-  description: "Diseñador y Desarrollador de Software",
+  title: "Diego García - Design & Dev",
+  description: "Software Developer & Designer",
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "relative antialiased bg-[#F6F5FF] dark:bg-[#1f1f1f]",
+          "relative antialiased bg-[#F6F5FF] dark:bg-[#19181B] overflow-x-hidden",
           inter.className
         )}
       >

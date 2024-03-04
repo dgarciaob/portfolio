@@ -7,9 +7,9 @@ function Contact() {
   return (
     <main className="flex flex-col md:flex md:flex-row md:justify-between md:items-center mb-40">
       <section className="flex flex-col space-y-6">
-        <h3 className="font-medium text-md text-[#1F1F1F] dark:text-zinc-200 flex-shrink-0">
+        {/* <h3 className="font-medium text-md text-[#1F1F1F] dark:text-zinc-200 flex-shrink-0">
           Socials
-        </h3>
+        </h3> */}
         <div className="flex flex-row space-x-4 group:hover:cursor-pointer">
           <div>
             <Link
@@ -55,15 +55,6 @@ function Contact() {
               </button>
             </Link>
           </div>
-        </div>
-      </section>
-
-      <section className="flex flex-col space-y-6">
-        <h3 className="font-medium text-md text-[#1F1F1F] dark:text-zinc-200 flex-shrink-0">
-          Escribeme un correo
-        </h3>
-        <div>
-          <Link href="mailto:diegogarciaobando1@gmail.com"></Link>
         </div>
       </section>
     </main>

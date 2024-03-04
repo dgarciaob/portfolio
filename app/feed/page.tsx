@@ -4,7 +4,7 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 function FeedPage() {
   return (
     <MaxWidthWrapper>
-      <div>FeedPage</div>
+      <main>FeedPage</main>
     </MaxWidthWrapper>
   );
 }

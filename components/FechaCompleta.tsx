@@ -2,7 +2,11 @@
 
 import { useState, useEffect } from "react";
 
-const FechaCompleta = () => {
+interface FechaCompletaProps {
+  className?: string;
+}
+
+const FechaCompleta = ({ className }: FechaCompletaProps) => {
   const [currentDate, setCurrentDate] = useState<Date | undefined>(undefined);
 
   useEffect(() => {
@@ -51,7 +55,7 @@ const FechaCompleta = () => {
   const status = isOfficeHours(currentDate) ? "Office Hours" : "After Hours";
 
   return (
-    <div className="text-center font-bold mt-20">
+    <div className="text-center font-bold mt-20 animate-navbar-slide-down transition">
       <p className="text-black dark:text-muted-foreground text-md selection:dark:bg-purple-900">
         {dateTimeFormatted} • {status}
       </p>
