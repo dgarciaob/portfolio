@@ -6,17 +6,23 @@ import AppScroll from "@/components/AppScroll";
 import Contact from "@/components/Contact";
 import Age from "@/components/Age";
 import { Quote } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 function AboutPage() {
   return (
     <MaxWidthWrapper>
-      <main className="mt-32 selection:bg-green-200 dark:selection:bg-blue-600">
-        <section className="mx-40 flex flex-col items-start">
+      <main className="mt-20 lg:mt-32 selection:bg-green-200 dark:selection:bg-blue-600">
+        <section className="lg:mx-20 xl:mx-40 flex flex-col items-start animate-navbar-slide-down transition">
           <div>
             <AnimatedTooltipPreview />
           </div>
           <div className="flex flex-col space-y-2">
-            <h1 className="font-bold text-4xl max-w-2xl text-center">
+            <h1 className="font-bold text-4xl max-w-2xl text-left md:text-center">
               Diego García Obando
             </h1>
             <p className="font-medium text-muted-foreground">
@@ -24,9 +30,18 @@ function AboutPage() {
             </p>
           </div>
           <p className="max-w-xl mt-8 font-medium">
-            Hey! I&apos;m a <Age /> years old Peruvian, self-taught Software
-            Developer & Designer. Mainly my career has been sales-focused, and
-            last year I decided to start my journey as a developer.
+            Hey! I&apos;m a <Age /> years old{" "}
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>🇵🇪</TooltipTrigger>{" "}
+                <TooltipContent className="font-bold py-1 rounded-3xl text-black dark:text-white dark:bg-[#1f1f1f] bg-white border border-solid border-muted-foreground dark:border-muted-foreground">
+                  Peruvian
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            , self-taught Software Developer & Designer. Mainly my career has
+            been sales-focused, and last year I decided to start my journey as a
+            developer.
           </p>
           <p className="max-w-xl mt-4 font-medium">
             I&apos;ve been working on really cool projects and I&apos;m always
@@ -39,8 +54,8 @@ function AboutPage() {
             Here is a little bit about me:
           </p>
         </section>
-        <h2 className="text-xl font-bold mx-40 mt-20">Photos</h2>
-        <section className="mx-40 flex flex-col items-start overflow-x-auto">
+        <h2 className="text-xl font-bold lg:mx-20 xl:mx-40 mt-20">Photos</h2>
+        <section className="lg:mx-20 xl:mx-40 flex flex-col items-start overflow-x-auto no-scrollbar">
           <div className="flex flex-row space-x-8 overflow-x-auto snap-mandatory">
             <DirectionAwareHoverDemo
               imageUrl="/images/Aqp.jpeg"
@@ -80,40 +95,42 @@ function AboutPage() {
             />
           </div>
         </section>
-        <section className="mx-40 flex flex-col items-start mt-20">
+        <section className="lg:mx-20 xl:mx-40 flex flex-col items-start mt-20">
           <h2 className="text-xl font-bold">Music</h2>
-          <div className="mt-12 flex flex-row space-x-8">
-            <iframe
-              src="https://open.spotify.com/embed/playlist/1BN25IgobPYxTSRqXH3LIL?utm_source=generator"
-              width="100%"
-              height="352"
-              className="rounded-xl"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-            <iframe
-              src="https://open.spotify.com/embed/track/4ANZKZkg74qHyVgd0gwO32?utm_source=generator"
-              width="100%"
-              className="rounded-xl"
-              height="352"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-            <iframe
-              src="https://open.spotify.com/embed/track/5QOBT97OmYCZo1W5u7tRrB?utm_source=generator"
-              width="100%"
-              height="352"
-              className="rounded-xl"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
+          <div className="items-start overflow-x-auto no-scrollbar">
+            <div className="mt-12 flex flex-row space-x-8 overflow-x-auto snap-mandatory no-scrollbar">
+              <iframe
+                src="https://open.spotify.com/embed/playlist/1BN25IgobPYxTSRqXH3LIL?utm_source=generator"
+                width="100%"
+                height="352"
+                className="rounded-xl snap-start"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+              <iframe
+                src="https://open.spotify.com/embed/track/4ANZKZkg74qHyVgd0gwO32?utm_source=generator"
+                width="100%"
+                className="rounded-xl snap-start"
+                height="352"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+              <iframe
+                src="https://open.spotify.com/embed/track/5QOBT97OmYCZo1W5u7tRrB?utm_source=generator"
+                width="100%"
+                height="352"
+                className="rounded-xl snap-start"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
-        </section>{" "}
-        <section className="mx-40 flex flex-col items-start mt-20">
+        </section>
+        <section className="lg:mx-20 xl:mx-40 flex flex-col items-start mt-20">
           <h2 className="text-xl font-bold">Favorite Apps</h2>
           <AppScroll />
         </section>
-        <section className="mx-40 flex flex-col items-start mt-20 mb-20">
+        <section className="lg:mx-20 xl:mx-40 flex flex-col items-start mt-20 mb-20">
           <h2 className="text-xl font-bold">Quote</h2>
           <div className="h-[8rem] dark:bg-[#1f1f1f] bg-muted-foreground w-[16rem] p-3 rounded-xl mt-12">
             <Quote size={32} className="dark:text-white text-white" />
@@ -122,13 +139,13 @@ function AboutPage() {
             </p>
           </div>
         </section>
-        <section className="flex gap-4 mx-40 items-center mb-8 mt-32">
+        <section className="flex gap-4 lg:mx-20 xl:mx-40 items-center mb-8 mt-32">
           <h2 className="font-medium text-md text-muted-foreground dark:text-zinc-200 flex-shrink-0">
             Let&apos;s Connect
           </h2>
           <div className="w-full h-[1px] bg-zinc-300 dark:bg-zinc-700"></div>
         </section>
-        <div className="mx-40">
+        <div className="lg:mx-20 xl:mx-40">
           <Contact />
         </div>
       </main>

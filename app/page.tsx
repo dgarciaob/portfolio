@@ -9,7 +9,7 @@ import "@/components/css/Navbar.css";
 export default function Home() {
   return (
     <MaxWidthWrapper>
-      <main className="mt-32 selection:bg-green-200 dark:selection:bg-purple-300">
+      <main className="mt-20 md:mt-32 selection:bg-green-200 dark:selection:bg-purple-300">
         <section className="flex flex-col items-center justify-center animate-navbar-slide-down transition">
           <AnimatedTooltipPreview />
           <h1 className="font-bold text-4xl max-w-2xl text-center">
@@ -27,7 +27,7 @@ export default function Home() {
           <div className="w-full h-[1px] bg-zinc-300 dark:bg-zinc-700"></div>
         </section>
 
-        <section className="flex flex-col gap-60">
+        <section className="flex flex-col gap-32 md:gap-60">
           <WorkCard
             src="/images/magnetSocialsLogo.png"
             alt="Magnet Logo"

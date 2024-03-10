@@ -8,7 +8,7 @@ import Image from "next/image";
 function PsicoSaas() {
   return (
     <MaxWidthWrapper>
-      <main className="mt-32 selection:bg-green-200 dark:selection:bg-blue-600">
+      <main className="mt-20 md:mt-32 selection:bg-green-200 dark:selection:bg-blue-600">
         <div className="flex flex-col space-y-2">
           <div className="flex flex-row items-center justify-start mb-2 w-full">
             <AnimatedTooltip items={people} />
@@ -26,24 +26,37 @@ function PsicoSaas() {
           provides a way to manage the payments and the history of the patients.
         </p>
 
-        <h2 className="text-xl font-bold mt-20">The Brand</h2>
-        <div className="mt-12 rounded-lg flex flex-col md:flex md:flex-row md:justify-between">
-          <Image
-            src="/images/calendarWeek.png"
-            alt="Nous Background"
-            width={1000}
-            height={1000}
-            className="rounded-lg h-[20rem] w-[40rem] object-fit"
-          />
-          <p className="font-semibold">Key Features:</p>
-          <ul className="space-y-4">
-            <li>Calendar & Appointments</li>
-            <li>Dashboard & Data</li>
-            <li>Payment Management</li>
-            <li>Patients Management</li>
-            <li>Patient Resources</li>
-            <li>Tests</li>
-          </ul>
+        <h2 className="text-xl font-bold mt-20">The Implementation</h2>
+
+        <p className="mt-12">
+          Beautifully crafted by Bruno Gardini - UX/UI Designer, aimed to be the
+          all-in-one solution for psychologists.
+        </p>
+
+        <div className="flex flex-row items-start overflow-x-auto mt-5">
+          <div className="flex flex-row space-x-8 overflow-x-auto snap-mandatory no-scrollbar">
+            <Image
+              src="/images/calendarMonth.png"
+              alt="Calendar Month"
+              width={1200}
+              height={1200}
+              className="w-[50rem] rounded-xl snap-start"
+            />
+            <Image
+              src="/images/calendarWeek.png"
+              alt="Calendar Week"
+              width={1200}
+              height={1200}
+              className="w-[50rem] rounded-xl snap-start"
+            />
+            <Image
+              src="/images/patientsScreen.png"
+              alt="Patients Screen"
+              width={1200}
+              height={1200}
+              className="w-[50rem] rounded-xl snap-start"
+            />
+          </div>
         </div>
 
         <h2 className="text-xl font-bold mt-32">The Goal</h2>
@@ -65,8 +78,8 @@ function PsicoSaas() {
           You will soon be able to check the SaaS. Stay tuned!
         </p>
         <p className="max-w-xl mt-4 font-medium">
-          The software is currently being built with Next.js, TailwindCSS,
-          PostgreSQL, Clerk Auth and will be deployed on Vercel.
+          The software is currently being built with Next.js, Typescript,
+          TailwindCSS, PostgreSQL, Clerk Auth and will be deployed on Vercel.
         </p>
 
         <section className="flex gap-4 items-center mb-8 mt-32">

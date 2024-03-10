@@ -10,52 +10,91 @@ import Image from "next/image";
 const Bewell = () => {
   return (
     <MaxWidthWrapper>
-      <main className="mt-32 selection:bg-green-200 dark:selection:bg-blue-600">
+      <main className="mt-20 md:mt-32 selection:bg-green-200 dark:selection:bg-blue-600">
         <div className="flex flex-col space-y-2">
           <div className="flex flex-row items-center justify-start mb-2 w-full">
             <AnimatedTooltip items={people} />
           </div>
-          <h1 className="font-recoletaAltBold text-3xl hover:text-green-700 transition-all duration-300 ease-in-out">
-            Nous
+          <h1 className="font-bold text-3xl hover:text-green-700 transition-all duration-300 ease-in-out">
+            Be Well
           </h1>
           <p className="font-medium text-muted-foreground">
-            Sofware as a Service for Psychologists
+            Healthcare Experience all-in-one App
           </p>
         </div>
         <p className="max-w-xl mt-8 font-medium">
-          Nous aims to be the all-in-one SaaS for psychologists to manage their
-          patients and appointments in a more efficient way. The platform also
-          provides a way to manage the payments and the history of the patients.
+          Be Well is an all-in-one app for healthcare professionals. It is
+          designed to help them manage their appointments, patients, and
+          payments. It also provides patients with resources, a journal for
+          thoughts, video analysis of their mood and tests.
         </p>
 
-        <h2 className="text-xl font-bold mt-20">The Brand</h2>
-        <div className="mt-12 rounded-lg flex flex-col md:flex md:flex-row md:justify-between">
-          <Image
-            src="/images/calendarWeek.png"
-            alt="Nous Background"
-            width={1000}
-            height={1000}
-            className="rounded-lg h-[20rem] w-[40rem] object-fit"
-          />
-          <p className="font-semibold">Key Features:</p>
-          <ul className="space-y-4">
-            <li>Calendar & Appointments</li>
-            <li>Dashboard & Data</li>
-            <li>Payment Management</li>
-            <li>Patients Management</li>
-            <li>Patient Resources</li>
-            <li>Tests</li>
-          </ul>
+        <h2 className="text-xl font-bold mt-20">The Implementation</h2>
+
+        <p className="mt-12">
+          Implemented <strong>new</strong> Expo Router, State Management with
+          useContext, useState, useEffect. Made use of Camera, Media and Video
+          Permissions and Components
+        </p>
+
+        <div className="flex flex-row items-start overflow-x-auto mt-5">
+          <div className="flex flex-row space-x-8 overflow-x-auto snap-mandatory no-scrollbar">
+            <Image
+              src="/images/bewellHome.jpeg"
+              alt="Bewell Home"
+              width={1200}
+              height={1200}
+              className="w-52 rounded-xl snap-start"
+            />
+            <Image
+              src="/images/bewellAppointment.jpeg"
+              alt="Bewell Home"
+              width={1200}
+              height={1200}
+              className="w-52 rounded-xl snap-start"
+            />
+            <Image
+              src="/images/bewellAppointment2.jpeg"
+              alt="Bewell Home"
+              width={1200}
+              height={1200}
+              className="w-52 rounded-xl snap-start"
+            />
+            <Image
+              src="/images/bewellJournal.jpeg"
+              alt="Bewell Home"
+              width={1200}
+              height={1200}
+              className="w-52 rounded-xl snap-start"
+            />
+            <Image
+              src="/images/bewellResources.jpeg"
+              alt="Bewell Home"
+              width={1200}
+              height={1200}
+              className="w-52 rounded-xl snap-start"
+            />
+            <Image
+              src="/images/bewellVideo.jpeg"
+              alt="Bewell Home"
+              width={1200}
+              height={1200}
+              className="w-52 rounded-xl snap-start"
+            />
+            <Image
+              src="/images/bewellVideo2.jpeg"
+              alt="Bewell Home"
+              width={1200}
+              height={1200}
+              className="w-52 rounded-xl snap-start"
+            />
+          </div>
         </div>
 
         <h2 className="text-xl font-bold mt-32">The Goal</h2>
         <p className="max-w-xl mt-12 font-medium">
-          Our goal is to give back time to psychologists, so they can focus on
-          their patients and not on the administrative tasks.
-        </p>
-        <p className="max-w-xl mt-4 font-medium">
-          Mental Health is a growing market and giving a hand to the main actors
-          of this market is a priority for us.
+          Provide a seamless solution for healthcare professionals to manage
+          their practice. Dual purpose: to help the patient
         </p>
 
         <div className="flex flex-row space-x-4 mt-32">
@@ -64,11 +103,12 @@ const Bewell = () => {
         </div>
 
         <p className="max-w-xl mt-12 font-medium">
-          You will soon be able to check the SaaS. Stay tuned!
+          You will soon be able to check the App on both iOS and Android. Stay
+          tuned!
         </p>
         <p className="max-w-xl mt-4 font-medium">
-          The software is currently being built with Next.js, TailwindCSS,
-          PostgreSQL, Clerk Auth and will be deployed on Vercel.
+          The App is currently being built with React Native, Typescript, Expo,
+          and Firebase.
         </p>
 
         <section className="flex gap-4 items-center mb-8 mt-32">
@@ -89,22 +129,15 @@ const people = [
   {
     id: 1,
     name: "Diego García",
-    designation: "Designer & Developer",
+    designation: "Front End Developer",
     image: "/images/profilePicDiego.png",
     className: "h-8 w-8",
   },
   {
     id: 2,
-    name: "Bruno Gardini",
-    designation: "Designer",
-    image: "/images/380.png",
-    className: "h-8 w-8",
-  },
-  {
-    id: 3,
-    name: "Bruno Jacobs",
-    designation: "Designer & Developer",
-    image: "/images/profilePicBJ.png",
+    name: "Fahad Ishaq",
+    designation: "Designer & Back End Developer",
+    image: "/images/fahad.png",
     className: "h-8 w-8",
   },
 ];

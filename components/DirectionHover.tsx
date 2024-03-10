@@ -16,7 +16,7 @@ interface DirectionAwareHoverProps {
 export function DirectionAwareHoverDemo(props: DirectionAwareHoverProps) {
   // const imageUrl = "/images/profilePicDiego.png";
   return (
-    <div className="h-[30rem] relative flex items-center justify-center">
+    <div className="md:h-[30rem] mt-8 md:mt-0 relative flex items-center justify-center">
       <DirectionAwareHover imageUrl={props.imageUrl}>
         <p className="font-bold text-xl">{props.title}</p>
         <p className="font-normal text-sm">{props.subtitle}</p>
