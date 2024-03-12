@@ -1,10 +1,10 @@
 ---
 title: "Learn to Build. Learn to Sell"
-subtitle: "If you can do both, you will be unstoppable"
-date: "10/03/2024"
+subtitle: "If you can do both, you will be unstoppable."
+date: "March 12, 2024"
 ---
 
-This is the first post to my feed section. I'm excited to share how I decided to expand my sales-driven expertise into the intriguing world of coding.
+This is the second post to my feed section. I'm excited to share how I decided to expand my sales-driven expertise into the intriguing world of coding.
 
 ## Discovering a New Paradigm
 
@@ -14,9 +14,11 @@ So, there I was, knee-deep in the world of sales, doing my thing and thinking I 
 
 It hit me like a ton of bricks. Suddenly, I realized there was a whole other world out there waiting for me, and I had to dive in headfirst.
 
-## Specialization is not for me
+## Specialisation is not for me
 
 Sales had taught me a lot - how to build strong relationships with people, close deals, and soft skills. But as the digital age kept marching on, I started feeling like something was missing, specially in a world of tech-savvy entrepreneurs. It was time to level up my game.
+
+Being able to expand my knowledge is extremely valuable. I don't believe in specialisation, it's boring to focus your life on just one particular thing.
 
 ## Taking the Plunge into Coding
 
