@@ -4,7 +4,6 @@ import Markdown from "markdown-to-jsx";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import matter from "gray-matter";
 import getPostsMetaData from "@/components/GetPostMetaData";
-import { ArrowLeft } from "lucide-react";
 
 const getPostsContent = (slug: string) => {
   // function to get the content
