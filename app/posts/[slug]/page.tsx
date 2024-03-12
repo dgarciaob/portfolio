@@ -19,6 +19,16 @@ const getPostsContent = (slug: string) => {
 //   return posts.map((post) => ({ slug: post.slug }));
 // };
 
+// export async function getStaticPaths() {
+//   const posts = getPostsMetaData();
+//   const paths = posts.map((post) => ({ params: { slug: post.slug } }));
+
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
+
 export async function getStaticPaths() {
   const posts = getPostsMetaData();
   const paths = posts.map((post) => ({ params: { slug: post.slug } }));
@@ -27,6 +37,11 @@ export async function getStaticPaths() {
     paths,
     fallback: false, // or 'blocking' or true, depending on your needs
   };
+}
+
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+  const post = getPostsContent(params.slug);
+  return { props: { post } };
 }
 
 function PostPage(props: any) {
