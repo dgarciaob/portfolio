@@ -14,13 +14,13 @@ const getPostsContent = (slug: string) => {
   return matterResult;
 };
 
-export const gerenateStaticPaths = async () => {
-  const posts = getPostsMetaData();
-  return posts.map((post) => ({ slug: post.slug }));
-};
+// export const gerenateStaticPaths = async () => {
+//   const posts = getPostsMetaData();
+//   return posts.map((post) => ({ slug: post.slug }));
+// };
 
-function PostPage(props: any) {
-  const slug = props.params.slug;
+function PostPage({ params }: { params: { slug: string } }) {
+  const slug = params.slug;
   const post = getPostsContent(slug);
   return (
     <MaxWidthWrapper>
